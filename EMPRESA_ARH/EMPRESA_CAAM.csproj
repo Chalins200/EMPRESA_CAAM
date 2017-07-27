@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BE6DB109-D691-4D4E-9E3F-66476EC00CC9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EMPRESA_ARH</RootNamespace>
+    <AssemblyName>EMPRESA_ARH</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clientes\SelectCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\SelectCliente.Designer.cs">
+      <DependentUpon>SelectCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetConsultas.cs">
+      <DependentUpon>DataSetConsultas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetConsultas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetConsultas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Detalle_Pedidos\SelectDetallePedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detalle_Pedidos\SelectDetallePedidos.Designer.cs">
+      <DependentUpon>SelectDetallePedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMPRESA_CAAMDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EMPRESA_CAAMDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Oficinas\SelectOficinas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Oficinas\SelectOficinas.Designer.cs">
+      <DependentUpon>SelectOficinas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pedidos\AgPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pedidos\AgPedidos.Designer.cs">
+      <DependentUpon>AgPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Oficinas\AgOficina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Oficinas\AgOficina.Designer.cs">
+      <DependentUpon>AgOficina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\AgClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\AgClientes.Designer.cs">
+      <DependentUpon>AgClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pedidos\SelectPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pedidos\SelectPedidos.Designer.cs">
+      <DependentUpon>SelectPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\AgProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos\AgProductos.Designer.cs">
+      <DependentUpon>AgProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConexionSQL.cs" />
+    <Compile Include="Productos\DeleteProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos\DeleteProductos.Designer.cs">
+      <DependentUpon>DeleteProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\SelectProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos\SelectProductos.Designer.cs">
+      <DependentUpon>SelectProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Representantes\AgRepresentantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Representantes\AgRepresentantes.Designer.cs">
+      <DependentUpon>AgRepresentantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\UPProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos\UPProductos.Designer.cs">
+      <DependentUpon>UPProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\UpClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\UpClientes.Designer.cs">
+      <DependentUpon>UpClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Representantes\SelectRepresentantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Representantes\SelectRepresentantes.Designer.cs">
+      <DependentUpon>SelectRepresentantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Representantes\UpRepresentantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Representantes\UpRepresentantes.Designer.cs">
+      <DependentUpon>UpRepresentantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Oficinas\UpOficina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Oficinas\UpOficina.Designer.cs">
+      <DependentUpon>UpOficina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pedidos\UpPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pedidos\UpPedidos.Designer.cs">
+      <DependentUpon>UpPedidos.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Clientes\SelectCliente.resx">
+      <DependentUpon>SelectCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detalle_Pedidos\SelectDetallePedidos.resx">
+      <DependentUpon>SelectDetallePedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Oficinas\AgOficina.resx">
+      <DependentUpon>AgOficina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\AgClientes.resx">
+      <DependentUpon>AgClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\UpClientes.resx">
+      <DependentUpon>UpClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Oficinas\SelectOficinas.resx">
+      <DependentUpon>SelectOficinas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Oficinas\UpOficina.resx">
+      <DependentUpon>UpOficina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pedidos\AgPedidos.resx">
+      <DependentUpon>AgPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pedidos\SelectPedidos.resx">
+      <DependentUpon>SelectPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pedidos\UpPedidos.resx">
+      <DependentUpon>UpPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos\AgProductos.resx">
+      <DependentUpon>AgProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos\DeleteProductos.resx">
+      <DependentUpon>DeleteProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos\SelectProductos.resx">
+      <DependentUpon>SelectProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Representantes\AgRepresentantes.resx">
+      <DependentUpon>AgRepresentantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos\UPProductos.resx">
+      <DependentUpon>UPProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Representantes\SelectRepresentantes.resx">
+      <DependentUpon>SelectRepresentantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Representantes\UpRepresentantes.resx">
+      <DependentUpon>UpRepresentantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetConsultas.xsc">
+      <DependentUpon>DataSetConsultas.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetConsultas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetConsultas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetConsultas.xss">
+      <DependentUpon>DataSetConsultas.xsd</DependentUpon>
+    </None>
+    <None Include="EMPRESA_CAAMDataSet.xsc">
+      <DependentUpon>EMPRESA_CAAMDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EMPRESA_CAAMDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EMPRESA_CAAMDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EMPRESA_CAAMDataSet.xss">
+      <DependentUpon>EMPRESA_CAAMDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
